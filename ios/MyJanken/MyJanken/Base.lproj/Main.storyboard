@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyJanken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xNH-AT-5pb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="678"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これからジャンケンをします！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRf-Cd-GXr">
+                                <rect key="frame" x="0.0" y="722" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QWg-Kf-PUU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0Z-ym-8EO">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="lE0-62-ncp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="ジャンケンをする！">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uC6-kX-VUJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.94901960784313721" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="D0Z-ym-8EO" firstAttribute="top" secondItem="LRf-Cd-GXr" secondAttribute="bottom" constant="0.01" id="47o-Q8-Kqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xNH-AT-5pb" secondAttribute="trailing" constant="0.01" id="FCI-v2-mL8"/>
+                            <constraint firstItem="LRf-Cd-GXr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="0.01" id="FRz-KF-Vtf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D0Z-ym-8EO" secondAttribute="bottom" constant="0.01" id="cft-d7-tE1"/>
+                            <constraint firstItem="LRf-Cd-GXr" firstAttribute="top" secondItem="xNH-AT-5pb" secondAttribute="bottom" constant="0.01" id="f20-ZA-aoT"/>
+                            <constraint firstItem="xNH-AT-5pb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="0.01" id="fps-ag-1j8"/>
+                            <constraint firstItem="xNH-AT-5pb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="0.01" id="i9w-39-Uuq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LRf-Cd-GXr" secondAttribute="trailing" constant="0.01" id="kZJ-7m-ld6"/>
+                            <constraint firstItem="D0Z-ym-8EO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="0.01" id="kpK-s4-h4S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D0Z-ym-8EO" secondAttribute="trailing" constant="0.01" id="oIo-gE-i6d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerImageView" destination="xNH-AT-5pb" id="94P-Yr-UPJ"/>
+                        <outlet property="answerLabel" destination="LRf-Cd-GXr" id="KGA-4l-NWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-320" y="145"/>
+        </scene>
+    </scenes>
+</document>

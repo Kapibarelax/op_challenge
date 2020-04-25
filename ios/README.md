@@ -1,2 +1,2 @@
-branch test
-master更新してごめんなさい
+branch test  
+master更新してごめんなさい  
